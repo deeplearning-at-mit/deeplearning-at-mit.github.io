@@ -14,22 +14,58 @@
     :root{color-scheme:light;--bg:#fff;--text:#142850;--muted:#52607a;--accent:#6941c6;--line:#dce1ee}
     *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--bg);color:var(--text);font-family:'Manrope',Arial,sans-serif;font-size:16px;line-height:1.6}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}a:focus-visible{outline:2px solid var(--accent);outline-offset:6px}::selection{background:var(--accent);color:white}.wrap{width:min(880px,calc(100% - 64px));margin:auto}.skip{position:fixed;top:-100px;left:20px;background:var(--accent);color:white;padding:12px;z-index:5}.skip:focus{top:12px}
     header{border-bottom:1px solid var(--line);padding:40px 0 0}h1{margin:0;font-size:clamp(1.8rem,4vw,2.75rem);line-height:1.18;font-weight:500;letter-spacing:-.025em}h1 a{color:var(--text)}h1 a:hover{text-decoration:none}h1 span{color:var(--accent);white-space:nowrap}nav{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:18px;padding-bottom:18px}nav a{font-size:.9375rem;font-weight:500;color:var(--text);padding:8px 0}nav a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:8px}
+    .header-inner{position:relative}.header-copy{padding-right:280px}.river-valley{position:absolute;right:0;top:-25px;width:250px;height:140px;pointer-events:none;overflow:hidden}.valley-contour{fill:none;stroke:url(#valley-ink);stroke-width:.8}.river-flow{fill:none;stroke:url(#river-ink);stroke-linecap:round;stroke-width:1.6;stroke-dasharray:5 20;animation:river-drift 10s linear infinite}.river-flow:nth-child(2){animation-delay:-3.3s;stroke-width:1.1;opacity:.65}.river-flow:nth-child(3){animation-delay:-6.6s;stroke-width:1.1;opacity:.65}@keyframes river-drift{to{stroke-dashoffset:-100}}
+    @media(max-width:850px){.header-copy{padding-right:190px}.river-valley{width:175px}h1{font-size:2rem}}
+    @media(max-width:600px){.header-copy{padding-right:0}.header-copy h1{padding-right:85px;font-size:1.8rem}.river-valley{width:85px;height:100px;top:-10px}}
     .section{padding:28px 0;border-bottom:1px solid var(--line)}h2{font-size:1.25rem;font-weight:500;line-height:1.3;letter-spacing:-.015em;margin:0 0 10px}p{margin:0 0 12px;max-width:690px;color:var(--muted);font-size:1rem}p:last-child{margin-bottom:0}.contact{display:inline-block;margin-top:4px;font-weight:500}.pending{border-left:2px solid var(--accent);padding:4px 0 4px 20px}.section:last-child{border-bottom:0}footer{border-top:1px solid var(--line);padding:20px 0}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}.footer-inner p,.footer-inner a{font-size:.875rem;margin:0}.footer-links{display:flex;flex-wrap:wrap;gap:12px 24px}
     .reading-list-box{margin-top:14px}.readings-box{border:1px solid var(--line);border-radius:16px;background:var(--bg);margin-top:16px}.readings-box summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;cursor:pointer;font-size:1rem;font-weight:500;color:var(--text);border-radius:16px}.readings-box summary::-webkit-details-marker{display:none}.readings-box summary:hover{background:#f7f5fc}.readings-box summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px}.reading-chevron{width:9px;height:9px;flex-shrink:0;border-right:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:rotate(45deg);margin-right:3px;margin-top:-4px}.readings-box[open] .reading-chevron{transform:rotate(225deg);margin-top:4px}.readings-box[open] summary{border-radius:16px 16px 0 0;border-bottom:1px solid var(--line)}.reading-list{list-style:none;margin:0;padding:20px}.reading-list li{padding:18px 0;border-top:1px solid var(--line)}.reading-list li:first-child{padding-top:0;border-top:0}.reading-list li:last-child{padding-bottom:0}.reading-list h3{font-size:1rem;line-height:1.5;font-weight:600;margin:0 0 6px;overflow-wrap:anywhere}.reading-list .reading-authors{font-size:.875rem;line-height:1.6;margin:0;max-width:none}.reading-list .reading-speaker{font-size:.8125rem;line-height:1.5;color:var(--accent);margin:4px 0 0}.reading-version{display:inline-block;margin-top:6px;font-size:.875rem}
     @media(max-width:700px){.wrap{width:calc(100% - 48px)}header{padding-top:24px}nav{gap:8px 18px;margin-top:18px;padding-bottom:16px}.section{padding:22px 0}.footer-inner{align-items:flex-start;flex-direction:column}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.river-flow{animation:none}}
   </style>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
   <header id="top">
-    <div class="wrap">
+    <div class="wrap header-inner">
+      <div class="header-copy">
       <h1><a href="#top">Deep Learning <span>@ MIT</span></a></h1>
       <nav aria-label="Main navigation">
         <a href="#who-we-are">Who We Are</a>
         <a href="#projects">Projects</a>
         <a href="#readings">Readings</a>
       </nav>
+      </div>
+      <svg class="river-valley" viewBox="0 0 250 140" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="valley-ink" x1="0" y1="0" x2="0" y2="140" gradientUnits="userSpaceOnUse"><stop stop-color="#ede5fc"/><stop offset=".5" stop-color="#bca4e5"/><stop offset="1" stop-color="#ede5fc"/></linearGradient>
+          <linearGradient id="river-wash" x1="100" y1="0" x2="150" y2="140" gradientUnits="userSpaceOnUse"><stop stop-color="#f7f3ff"/><stop offset=".5" stop-color="#ddd0f7"/><stop offset="1" stop-color="#f6f2fd"/></linearGradient>
+          <linearGradient id="river-ink" x1="110" y1="0" x2="145" y2="140" gradientUnits="userSpaceOnUse"><stop stop-color="#c4a5ed"/><stop offset=".55" stop-color="#7648bf"/><stop offset="1" stop-color="#b394df"/></linearGradient>
+          <linearGradient id="valley-fade" x1="0" y1="0" x2="0" y2="1"><stop stop-color="white" stop-opacity="0"/><stop offset=".15" stop-color="white"/><stop offset=".8" stop-color="white"/><stop offset="1" stop-color="white" stop-opacity="0"/></linearGradient>
+          <mask id="valley-mask"><rect width="250" height="140" fill="url(#valley-fade)"/></mask>
+        </defs>
+        <g mask="url(#valley-mask)">
+          <g class="valley-contour">
+            <path d="M78 -12C25 27 110 40 73 75S-3 113 27 152"/>
+            <path d="M88 -12C38 27 120 40 85 75S10 114 42 152"/>
+            <path d="M98 -12C51 27 130 40 97 75S23 115 57 152"/>
+            <path d="M108 -12C64 27 140 40 109 75S36 116 72 152"/>
+            <path d="M118 -12C77 27 150 40 121 75S49 117 87 152"/>
+            <path d="M128 -12C90 27 160 40 133 75S62 118 102 152"/>
+            <path d="M156 -12C121 27 189 40 164 75S95 120 137 152"/>
+            <path d="M166 -12C134 27 199 40 176 75S108 121 152 152"/>
+            <path d="M176 -12C147 27 209 40 188 75S121 122 167 152"/>
+            <path d="M186 -12C160 27 219 40 200 75S134 123 182 152"/>
+            <path d="M196 -12C173 27 229 40 212 75S147 124 197 152"/>
+            <path d="M206 -12C186 27 239 40 224 75S160 125 212 152"/>
+          </g>
+          <path d="M135 -12C98 27 168 40 141 75S71 119 111 152L128 152C88 120 146 106 157 75S118 27 149 -12Z" fill="url(#river-wash)"/>
+          <g>
+            <path class="river-flow" pathLength="100" d="M142 -12C108 27 179 40 149 75S80 119 120 152"/>
+            <path class="river-flow" pathLength="100" d="M137 -12C102 27 173 40 144 75S75 119 115 152"/>
+            <path class="river-flow" pathLength="100" d="M147 -12C114 27 185 40 154 75S85 119 125 152"/>
+          </g>
+        </g>
+      </svg>
     </div>
   </header>
   <main id="main" class="wrap">
