@@ -15,7 +15,7 @@
     *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--bg);color:var(--text);font-family:'Manrope',Arial,sans-serif;font-size:16px;line-height:1.6}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}a:focus-visible{outline:2px solid var(--accent);outline-offset:6px}::selection{background:var(--accent);color:white}.wrap{width:min(880px,calc(100% - 64px));margin:auto}.skip{position:fixed;top:-100px;left:20px;background:var(--accent);color:white;padding:12px;z-index:5}.skip:focus{top:12px}
     header{border-bottom:1px solid var(--line);padding:40px 0 0}h1{margin:0;font-size:clamp(1.8rem,4vw,2.75rem);line-height:1.18;font-weight:500;letter-spacing:-.025em}h1 a{color:var(--text)}h1 a:hover{text-decoration:none}h1 span{color:var(--accent);white-space:nowrap}nav{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:18px;padding-bottom:18px}nav a{font-size:.9375rem;font-weight:500;color:var(--text);padding:8px 0}nav a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:8px}
     .section{padding:28px 0;border-bottom:1px solid var(--line)}h2{font-size:1.25rem;font-weight:500;line-height:1.3;letter-spacing:-.015em;margin:0 0 10px}p{margin:0 0 12px;max-width:690px;color:var(--muted);font-size:1rem}p:last-child{margin-bottom:0}.contact{display:inline-block;margin-top:4px;font-weight:500}.pending{border-left:2px solid var(--accent);padding:4px 0 4px 20px}.section:last-child{border-bottom:0}footer{border-top:1px solid var(--line);padding:20px 0}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}.footer-inner p,.footer-inner a{font-size:.875rem;margin:0}.footer-links{display:flex;flex-wrap:wrap;gap:12px 24px}
-    .reading-list{list-style:none;margin:20px 0 0;padding:0}.reading-list li{padding:18px 0;border-top:1px solid var(--line)}.reading-list li:first-child{padding-top:0;border-top:0}.reading-list li:last-child{padding-bottom:0}.reading-list h3{font-size:1rem;line-height:1.5;font-weight:600;margin:0 0 6px;overflow-wrap:anywhere}.reading-list .reading-authors{font-size:.875rem;line-height:1.6;margin:0;max-width:none}.reading-version{display:inline-block;margin-top:6px;font-size:.875rem}
+    .reading-list{list-style:none;margin:20px 0 0;padding:0}.reading-list li{padding:18px 0;border-top:1px solid var(--line)}.reading-list li:first-child{padding-top:0;border-top:0}.reading-list li:last-child{padding-bottom:0}.reading-list h3{font-size:1rem;line-height:1.5;font-weight:600;margin:0 0 6px;overflow-wrap:anywhere}.reading-list .reading-authors{font-size:.875rem;line-height:1.6;margin:0;max-width:none}.reading-list .reading-speaker{font-size:.8125rem;line-height:1.5;color:var(--accent);margin:4px 0 0}.reading-version{display:inline-block;margin-top:6px;font-size:.875rem}
     @media(max-width:700px){.wrap{width:calc(100% - 48px)}header{padding-top:24px}nav{gap:8px 18px;margin-top:18px;padding-bottom:16px}.section{padding:22px 0}.footer-inner{align-items:flex-start;flex-direction:column}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   </style>
@@ -51,60 +51,74 @@
       <ul class="reading-list">
         <li>
           <h3><a href="https://jax-ml.github.io/scaling-book/">How to Scale Your Model</a></h3>
-          <p class="reading-authors">Jacob Austin, Sholto Douglas, Roy Frostig, Anselm Levskaya, Charlie Chen, Sharad Vikram, Federico Lebron, Peter Choy, Vinay Ramasesh, Albert Webson, Reiner Pope</p>
+          <p class="reading-authors">Jacob Austin et al.</p>
+          <p class="reading-speaker">Invited Guest Speaker</p>
         </li>
         <li>
           <h3><a href="https://arxiv.org/abs/2506.06266">Cartridges: Lightweight and general-purpose long context representations via self-study</a></h3>
-          <p class="reading-authors">Sabri Eyuboglu, Ryan Ehrlich, Simran Arora, Neel Guha, Dylan Zinsley, Emily Liu, Will Tennien, Atri Rudra, James Zou, Azalia Mirhoseini, Christopher Re</p>
+          <p class="reading-authors">Sabri Eyuboglu et al.</p>
+          <p class="reading-speaker">Invited Guest Speaker</p>
         </li>
         <li>
           <h3><a href="https://arxiv.org/pdf/2507.22448">Falcon-H1: A Family of Hybrid-Head Language Models Redefining Efficiency and Performance</a></h3>
-          <p class="reading-authors">Jingwei Zuo, Maksim Velikanov, Ilyas Chahed, Younes Belkada, Dhia Eddine Rhayem, Guillaume Kunsch, Hakim Hacid, Hamza Yous, Brahim Farhat, Ibrahim Khadraoui, Mugariya Farooq, Giulia Campesan, Ruxandra Cojocaru, Yasser Djilali, Shi Hu, Iheb Chaabane, Puneesh Khanna, Mohamed El Amine Seddik, Ngoc Dung Huynh, Phuc Le Khac, Leen AlQadi, Billel Mokeddem, Mohamed Chami, Abdalgader Abubaker, Mikhail Lubinets, Kacper Piskorski, Slim Frikha</p>
+          <p class="reading-authors">Jingwei Zuo et al.</p>
+          <p class="reading-speaker">Invited Guest Speaker</p>
         </li>
         <li>
           <h3><a href="https://arxiv.org/pdf/2406.06484">Parallelizing Linear Transformers with the Delta Rule over Sequence Length</a></h3>
-          <p class="reading-authors">Songlin Yang, Bailin Wang, Yu Zhang, Yikang Shen, Yoon Kim</p>
+          <p class="reading-authors">Songlin Yang et al.</p>
+          <p class="reading-speaker">Invited Guest Speaker</p>
         </li>
         <li>
           <h3><a href="https://thinkingmachines.ai/blog/lora/">LoRA Without Regret</a></h3>
-          <p class="reading-authors">John Schulman, in collaboration with others at Thinking Machines</p>
+          <p class="reading-authors">John Schulman et al.</p>
+          <p class="reading-speaker">Invited Guest Speaker</p>
         </li>
         <li>
           <h3><a href="https://arxiv.org/abs/2502.09992">Large Language Diffusion Models</a></h3>
-          <p class="reading-authors">Shen Nie, Fengqi Zhu, Zebin You, Xiaolu Zhang, Jingyang Ou, Jun Hu, Jun Zhou, Yankai Lin, Ji-Rong Wen, Chongxuan Li</p>
+          <p class="reading-authors">Shen Nie et al.</p>
+          <p class="reading-speaker">Invited Guest Speaker</p>
         </li>
         <li>
           <h3><a href="https://kellerjordan.github.io/posts/muon/">Muon: An optimizer for hidden layers in neural networks</a></h3>
           <p class="reading-authors">Keller Jordan</p>
+          <p class="reading-speaker">Invited Guest Speaker</p>
         </li>
         <li>
           <h3><a href="https://arxiv.org/html/2511.22570v1">DeepSeekMath-V2: Towards Self-Verifiable Mathematical Reasoning</a></h3>
-          <p class="reading-authors">Zhihong Shao, Yuxiang Luo, Chengda Lu, Z.Z. Ren, Jiewen Hu, Tian Ye, Zhibin Gou, Shirong Ma, Xiaokang Zhang</p>
+          <p class="reading-authors">Zhihong Shao et al.</p>
+          <p class="reading-speaker">Invited Guest Speaker</p>
         </li>
         <li>
           <h3><a href="https://arxiv.org/pdf/2511.13653">Weight-sparse transformers have interpretable circuits</a></h3>
-          <p class="reading-authors">Leo Gao, Achyuta Rajaram, Jacob Coxon, Soham V. Govande, Bowen Baker, Dan Mossing</p>
+          <p class="reading-authors">Leo Gao et al.</p>
+          <p class="reading-speaker">Invited Guest Speaker</p>
         </li>
         <li>
           <h3><a href="https://arxiv.org/pdf/2512.23675">End-to-End Test-Time Training for Long Context</a></h3>
-          <p class="reading-authors">Arnuv Tandon, Karan Dalal, Xinhao Li, Daniel Koceja, Marcel Rød, Sam Buchanan, Xiaolong Wang, Jure Leskovec, Sanmi Koyejo, Tatsunori Hashimoto, Carlos Guestrin, Jed McCaleb, Yejin Choi, Yu Sun</p>
+          <p class="reading-authors">Arnuv Tandon et al.</p>
+          <p class="reading-speaker">Invited Guest Speaker</p>
         </li>
         <li>
           <h3><a href="https://arxiv.org/pdf/2511.05541">Temporal Sparse Autoencoders: Leveraging the Sequential Nature of Language for Interpretability</a></h3>
-          <p class="reading-authors">Usha Bhalla, Alex Oesterling, Claudio Mayrink Verdun, Himabindu Lakkaraju, Flavio P. Calmon</p>
+          <p class="reading-authors">Usha Bhalla et al.</p>
+          <p class="reading-speaker">Invited Guest Speaker</p>
         </li>
         <li>
           <h3><a href="https://arxiv.org/pdf/2603.12228v1">Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights</a></h3>
-          <p class="reading-authors">Yulu Gan, Phillip Isola</p>
+          <p class="reading-authors">Yulu Gan et al.</p>
+          <p class="reading-speaker">Invited Guest Speaker</p>
           <a class="reading-version" href="https://arxiv.org/abs/2603.12228">arXiv abstract and versions</a>
         </li>
         <li>
           <h3><a href="https://arxiv.org/pdf/2602.04770">Generative Modeling via Drifting</a></h3>
-          <p class="reading-authors">Mingyang Deng, He Li, Tianhong Li, Yilun Du, Kaiming He</p>
+          <p class="reading-authors">Mingyang Deng et al.</p>
+          <p class="reading-speaker">Invited Guest Speaker</p>
         </li>
         <li>
           <h3><a href="https://arxiv.org/html/2604.21691v1">There Will Be a Scientific Theory of Deep Learning</a></h3>
-          <p class="reading-authors">Jamie Simon, Daniel Kunin, Alexander Atanasov, Enric Boix-Adserà, Blake Bordelon, Jeremy Cohen, Nikhil Ghosh, Florentin Guth, Arthur Jacot, Mason Kamb, Dhruva Karkada, Eric J. Michaud, Berkan Ottlik, Joseph Turnbull</p>
+          <p class="reading-authors">Jamie Simon et al.</p>
+          <p class="reading-speaker">Invited Guest Speaker</p>
         </li>
       </ul>
     </section>
